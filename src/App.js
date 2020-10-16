@@ -10,6 +10,7 @@ import Order from './Components/Order/Order';
 import ServerList from './Components/ServerList/ServerList';
 import Review from './Components/Review/Review';
 import OrderList from './Components/OrderList/OrderList';
+import Admins from './Components/Admins/Admins';
 export const UserContext = createContext()
 function App() {
     const [loggedInUser,
@@ -30,6 +31,9 @@ function App() {
                         </Route>
                         <Route path="/review">
                             <Review></Review>
+                        </Route>
+                        <Route path="/admins">
+                            <Admins></Admins>
                         </Route>
                         <Route path="/orderList">
                             <OrderList></OrderList>
