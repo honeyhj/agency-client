@@ -7,14 +7,21 @@ import netflix from '../../images/logos/netflix.png';
 import slack from '../../images/logos/slack.png';
 import uber from '../../images/logos/uber.png';
 import '../../App.css'
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 const Landing = () => {
-    function handleOpen (){
-        document.getElementById('mobile').style.display='block'
+    const openNav = () => {
+        document
+            .getElementById('mobile')
+            .style
+            .display = 'block'
     }
-    function handleClose (){
-        document.getElementById('mobile').style.display='none'
+    const closeNav = () => {
+        document
+            .getElementById('mobile')
+            .style
+            .display = 'none'
     }
+
     return (
         <section id="landing">
             <div className="tie">
@@ -24,34 +31,58 @@ const Landing = () => {
                     </div>
                     <div className="menu">
                         <ul>
-                            <li><Link to="" className="link">home</Link></li>
-                            <li><Link to="" className="link">our portfolio</Link></li>
-                            <li><Link to="" className="link">our team</Link></li>
-                            <li><Link to="" className="link">contact us</Link></li>
-                            <li><Link to="/dashboard" className="link">Dashboard</Link></li>
+                            <li>
+                                <Link to="" className="link">home</Link>
+                            </li>
+                            <li>
+                                <Link to="" className="link">our portfolio</Link>
+                            </li>
+                            <li>
+                                <Link to="" className="link">our team</Link>
+                            </li>
+                            <li>
+                                <Link to="" className="link">contact us</Link>
+                            </li>
+                            <li>
+                                <Link to="/dashboard" className="link">Dashboard</Link>
+                            </li>
                         </ul>
                     </div>
-                </div>
-                <div id="mobile-menu">
-                    <span onclick="handleOpen()" className="open">Menu</span>
-                <div id="mobile">
-                    <span onclick="handleClose()" className="close">Close</span>
-                    <ul>
-                                <li><Link to="" className="link">home</Link></li>
-                                <li><Link to="" className="link">our portfolio</Link></li>
-                                <li><Link to="" className="link">our team</Link></li>
-                                <li><Link to="" className="link">contact us</Link></li>
-                                <li><Link to="/dashboard" className="link">Dashboard</Link></li>
+                    <div id="mobile-menu">
+                        <span onClick={openNav} className="open">Menu</span>
+                        <div id="mobile">
+                            <span onClick={closeNav} className="close">Close</span>
+                            <ul>
+                                <li>
+                                    <Link to="" className="link">home</Link>
+                                </li>
+                                <li>
+                                    <Link to="" className="link">our portfolio</Link>
+                                </li>
+                                <li>
+                                    <Link to="" className="link">our team</Link>
+                                </li>
+                                <li>
+                                    <Link to="" className="link">contact us</Link>
+                                </li>
+                                <li>
+                                    <Link to="/dashboard" className="link">Dashboard</Link>
+                                </li>
                             </ul>
-                </div>
+                        </div>
+                    </div>
                 </div>
                 <main id="main">
                     <div className="heading">
                         <div>
-                            <h1>Let's Grow your<br />brand to the<br />next level</h1>
-                            <p>Lorem ipsum dolor sit amet<br /> consectetur adipisicing elit.<br /> Natus laboriosam voluptas repellat vero at non.</p>
+                            <h1>Let's Grow your<br/>brand to the<br/>next level</h1>
+                            <p>Lorem ipsum dolor sit amet<br/>
+                                consectetur adipisicing elit.<br/>
+                                Natus laboriosam voluptas repellat vero at non.</p>
                             <div className="btn">
-                                <span><Link to="" className="link">hire us</Link></span>
+                                <span>
+                                    <Link to="" className="link">hire us</Link>
+                                </span>
                             </div>
                         </div>
                     </div>

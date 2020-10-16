@@ -26,14 +26,14 @@ const Service = () => {
                     </Link>
                     <Link to="/dashboard" className="link">
                         <div className="item">
-                            <img src={service1} alt="service1"/>
+                            <img src={service2} alt="service1"/>
                             <h3>Responsive design</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni?</p>
                         </div>
                     </Link>
                     <Link to="/dashboard" className="link">
                         <div className="item">
-                            <img src={service1} alt="service1"/>
+                            <img src={service3} alt="service1"/>
                             <h3>Graphic design</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, magni?</p>
                         </div>

@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { UserContext } from '../../App';
 import Admins from '../Admins/Admins';
 import Order from '../Order/Order';
@@ -21,26 +22,38 @@ const Dashboard = () => {
     return (
         <div id="dashboard">
             <div className="sidebar">
-                <ul>
-                    <li>Order</li>
-                    <li>Service List</li>
-                    <li>Preview</li>
-                    <li>Add Service</li>
-                    <li>Make Admin</li>
-                </ul>
-            </div>
-            {
+                {/* <ul>
+                    <li><Link to="/order" className="link">Order</Link></li>
+                    <li><Link to="/serverList" className="link">ServiceList</Link></li>
+                    <li><Link to="/review" className="link">Review</Link></li>
+                    <li><Link to="/admins" className="link">Admins</Link></li>
+                    <li><Link to="/orderList" className="link">OrderList</Link></li>
+                </ul> */}
+                {
                 checkAdmin ? <div>
-                    <Admins></Admins> 
-                    <ServerList></ServerList>
+                    <li><Link to="/admins" className="link">Admins</Link></li>
+                    <li><Link to="/serverList" className="link">ServiceList</Link></li>
                 </div>
                 :
                 <div>
-                    <Order></Order>
-                    <Review></Review>
-                    <OrderList></OrderList>
+                    <li><Link to="/order" className="link">Order</Link></li>
+                    <li><Link to="/review" className="link">Review</Link></li>
+                    <li><Link to="/orderList" className="link">OrderList</Link></li>
                 </div>
             }
+            </div>
+            {/* {
+                checkAdmin ? <div>
+                    <li><Link to="/admins" className="link">Admins</Link></li>
+                    <li><Link to="/serverList" className="link">ServiceList</Link></li>
+                </div>
+                :
+                <div>
+                    <li><Link to="/order" className="link">Order</Link></li>
+                    <li><Link to="/review" className="link">Review</Link></li>
+                    <li><Link to="/orderList" className="link">OrderList</Link></li>
+                </div>
+            } */}
         </div>
     );
 };
