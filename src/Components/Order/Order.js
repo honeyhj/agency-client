@@ -6,7 +6,7 @@ const Order = () => {
 
     return (
         <div id="order">
-            <form action="http://localhost:4000/allOrder" method="POST">
+            <form action="https://ancient-dawn-91525.herokuapp.com/allOrder" method="POST">
                 <input type="text" name="name" value={loggedInUser.name} placeholder="Your name/ company's name"/>
                 <input type="email" name="email"  value={loggedInUser.email} placeholder="Your email address"/>
                 <input type="text" name="category"  placeholder="Graphic Design"/>

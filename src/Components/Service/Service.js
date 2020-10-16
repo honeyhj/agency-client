@@ -8,7 +8,7 @@ import service3 from '../../images/icons/service3.png';
 const Service = () => {
     const [allService,setAllService] = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:4000/allService')
+        fetch('https://ancient-dawn-91525.herokuapp.com/allService')
         .then(res =>res.json())
         .then(data=>setAllService(data))
     })

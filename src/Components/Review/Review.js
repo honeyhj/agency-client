@@ -3,7 +3,7 @@ import React from 'react';
 const Review = () => {
     return (
         <div id="review">
-            <form action='http://localhost:4000/allReview' method="POST">
+            <form action='https://ancient-dawn-91525.herokuapp.com/allReview' method="POST">
                 <input type="text" name="name" placeholder="Your name"/>
                 <input type="text" name="company" placeholder="Company's name Design"/>
                 <input type="text" name="description" placeholder="Description"/>

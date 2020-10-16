@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 const DisplayReview = () => {
     const [displayReview,setDisplayReview]=useState([]);
     useEffect(() =>{
-        fetch('http://localhost:4000/allReview')
+        fetch('https://ancient-dawn-91525.herokuapp.com/allReview')
         .then(res =>res.json())
         .then(data =>setDisplayReview(data))
     },[])
